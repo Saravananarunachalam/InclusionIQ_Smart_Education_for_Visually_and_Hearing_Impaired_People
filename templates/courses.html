@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccessLearn - Courses</title>
+    <style>
+        :root {
+            --bg: #FF6B6B; /* Coral from previous design */
+            --text: #0a0a0a; /* White for contrast */
+            --accent: #FFD93D; /* Yellow from previous design */
+            --card: rgba(255, 255, 255, 0.15); /* Brighter semi-transparent card */
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Softer shadow for vibrant bg */
+        }
+        body {
+            font-family: 'SF Pro', Arial, sans-serif;
+            background: linear-gradient(135deg, #FF6B6B, #4ECDC4); /* Coral to teal gradient */
+            color: var(--text);
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px;
+            background: var(--card);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            animation: fadeIn 1.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 40px;
+            animation: slideDown 1s ease-out;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .category {
+            margin-bottom: 50px;
+        }
+        h2 {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        li {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 217, 61, 0.5); /* Yellow glow matching --accent */
+        }
+        li a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+        @media (max-width: 800px) {
+            h1 { font-size: 2.5rem; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AccessLearn - Courses</h1>
+        <div class="category">
+            <h2>Visually Impaired</h2>
+            <ul>
+                <li><a href="/visually">Python Programming</a></li>
+                <li><a href="/visually">Java Fundamentals</a></li>
+                <li><a href="/visually">JavaScript Basics</a></li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Hearing Impaired</h2>
+            <ul>
+                <li><a href="/hearing">Artificial Intelligence</a></li>
+                <li><a href="/hearing">Data Science</a></li>
+                <li><a href="/hearing">Machine Learning</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
